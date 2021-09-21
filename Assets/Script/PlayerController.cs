@@ -67,10 +67,14 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if (Input.GetAxis("Vertical")==00 && Input.GetAxis("Horizontal")==0)
+      
+
+        if (Input.GetAxis("Vertical")==0 && Input.GetAxis("Horizontal")==0)
         {
             playerAnimator.SetBool("IsRunning", false);
             isRunning = false;
         }
+
+        
     }
 }
