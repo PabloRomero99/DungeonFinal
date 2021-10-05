@@ -1,4 +1,5 @@
-using System.Collections;
+/*
+ *using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,3 +29,4 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.DrawLine(transform.position, target, Color.green);
     }
 }
+ */ 
