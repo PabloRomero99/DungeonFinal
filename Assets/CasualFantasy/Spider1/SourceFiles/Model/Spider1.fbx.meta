@@ -1,47 +1,119 @@
 fileFormatVersion: 2
 guid: eaa6c567d9ea03744a0d4ea30cfe9f99
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: Base
-    100004: Body
-    100006: LegBack1_L
-    100008: LegBack1_R
-    100010: LegBack2_L
-    100012: LegBack2_R
-    100014: LegFront1_L
-    100016: LegFront1_R
-    100018: LegFront2_L
-    100020: LegFront2_R
-    100022: //RootNode
-    400000: Armature
-    400002: Base
-    400004: Body
-    400006: LegBack1_L
-    400008: LegBack1_R
-    400010: LegBack2_L
-    400012: LegBack2_R
-    400014: LegFront1_L
-    400016: LegFront1_R
-    400018: LegFront2_L
-    400020: LegFront2_R
-    400022: //RootNode
-    2100000: Fur_Color
-    2100002: SkinColor
-    2100004: Teeth
-    2100006: Eyes
-    4300000: Body
-    7400000: Default Take
-    7400002: Attack
-    7400004: Death
-    7400006: Idle
-    7400008: Walk
-    9500000: //RootNode
-    13700000: Body
+  serializedVersion: 21100
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: Base
+  - first:
+      1: 100004
+    second: Body
+  - first:
+      1: 100006
+    second: LegBack1_L
+  - first:
+      1: 100008
+    second: LegBack1_R
+  - first:
+      1: 100010
+    second: LegBack2_L
+  - first:
+      1: 100012
+    second: LegBack2_R
+  - first:
+      1: 100014
+    second: LegFront1_L
+  - first:
+      1: 100016
+    second: LegFront1_R
+  - first:
+      1: 100018
+    second: LegFront2_L
+  - first:
+      1: 100020
+    second: LegFront2_R
+  - first:
+      1: 100022
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: Base
+  - first:
+      4: 400004
+    second: Body
+  - first:
+      4: 400006
+    second: LegBack1_L
+  - first:
+      4: 400008
+    second: LegBack1_R
+  - first:
+      4: 400010
+    second: LegBack2_L
+  - first:
+      4: 400012
+    second: LegBack2_R
+  - first:
+      4: 400014
+    second: LegFront1_L
+  - first:
+      4: 400016
+    second: LegFront1_R
+  - first:
+      4: 400018
+    second: LegFront2_L
+  - first:
+      4: 400020
+    second: LegFront2_R
+  - first:
+      4: 400022
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: Fur_Color
+  - first:
+      21: 2100002
+    second: SkinColor
+  - first:
+      21: 2100004
+    second: Teeth
+  - first:
+      21: 2100006
+    second: Eyes
+  - first:
+      43: 4300000
+    second: Body
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: Attack
+  - first:
+      74: 7400004
+    second: Death
+  - first:
+      74: 7400006
+    second: Idle
+  - first:
+      74: 7400008
+    second: Walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -70,6 +142,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: Attack
+      internalID: 0
       firstFrame: -1
       lastFrame: 24
       wrapMode: 0
@@ -98,6 +171,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Death
+      internalID: 0
       firstFrame: -1
       lastFrame: 21
       wrapMode: 0
@@ -126,7 +200,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
-      firstFrame: -1
+      internalID: 0
+      firstFrame: 0
       lastFrame: 89
       wrapMode: 0
       orientationOffsetY: 0
@@ -154,6 +229,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Walk
+      internalID: 0
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -186,25 +262,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.3
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 90
     normalImportMode: 1
@@ -213,10 +296,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -226,13 +309,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
