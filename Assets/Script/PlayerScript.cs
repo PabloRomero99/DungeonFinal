@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        estoyAtacando = false;
         m_Animator = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
