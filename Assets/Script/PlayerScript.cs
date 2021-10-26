@@ -20,13 +20,17 @@ public class PlayerScript : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !estoyAtacando)
         {
             m_Animator.SetTrigger("Attack1");
+            estoyAtacando = true;
         }
+
+    }
+    void FixedUpdate()
+    {
         if (!estoyAtacando)
         {
             float horizontal = Input.GetAxis("Horizontal");
@@ -44,8 +48,11 @@ public class PlayerScript : MonoBehaviour
             m_Rotation = Quaternion.LookRotation(desiredForward);
             m_Rigidbody.MovePosition(transform.position + m_Movement * n_speed * Time.deltaTime);
             m_Rigidbody.MoveRotation(m_Rotation);
-
         }
+    }
 
+    public void DejoDeAtacar()
+    {
+        estoyAtacando = false;
     }
 }

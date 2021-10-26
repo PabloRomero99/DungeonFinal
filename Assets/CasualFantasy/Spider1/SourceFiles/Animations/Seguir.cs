@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class seguir : MonoBehaviour
+public class Seguir : MonoBehaviour
 {
     Transform player;
     UnityEngine.AI.NavMeshAgent nav;

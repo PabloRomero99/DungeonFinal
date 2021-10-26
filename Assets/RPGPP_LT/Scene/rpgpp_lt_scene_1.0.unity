@@ -802,7 +802,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 110398713}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
@@ -5138,6 +5138,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: "compa\xF1ero"
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.0000025044778
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.2061766
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01880992
@@ -5177,6 +5193,102 @@ PrefabInstance:
     - target: {fileID: 400004, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -88.68641
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -138.28682
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -76.52111
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 87.49383
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -108.21858
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -143.83492
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -55.904568
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -81.778625
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 3.1475787
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -55.059887
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -97.58808
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 176.62183
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -87.881226
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -120.45603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -39.93036
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.0934
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -133.35373
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -104.35806
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -70.403625
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 113.10023
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 169.57089
+      objectReference: {fileID: 0}
+    - target: {fileID: 400020, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -62.214703
+      objectReference: {fileID: 0}
+    - target: {fileID: 400020, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 78.41171
+      objectReference: {fileID: 0}
+    - target: {fileID: 400020, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -2.7541206
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: eaa6c567d9ea03744a0d4ea30cfe9f99, type: 3}
       propertyPath: m_RootOrder
@@ -9394,7 +9506,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7178463, y: 1}
+    m_SensorSize: {x: 2.0634573, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
