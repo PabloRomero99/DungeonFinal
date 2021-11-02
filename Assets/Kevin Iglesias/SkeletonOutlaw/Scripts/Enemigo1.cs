@@ -60,7 +60,7 @@ public class Enemigo1 : MonoBehaviour
                 ani.SetBool("walk", false);
 
                 ani.SetBool("run", true);
-                transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+                transform.Translate(Vector3.forward * 4 * Time.deltaTime);
 
                 ani.SetBool("attack", false);
             }
