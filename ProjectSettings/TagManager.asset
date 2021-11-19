@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DogPolyart
   - Jugador
+  - armaImpacto
   layers:
   - Default
   - TransparentFX

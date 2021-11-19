@@ -9746,7 +9746,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6983957, y: 1}
+    m_SensorSize: {x: 2.52815, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10815,6 +10815,7 @@ MonoBehaviour:
   estoyAtacando: 0
   n_speed: 7
   IsRunning: 0
+  armasBoxCol: []
 --- !u!114 &1157947294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10827,7 +10828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308849b4bcbfe34499ce9f6d232c60c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimator: {fileID: 1591141514}
+  playerAnimator: {fileID: 0}
   estoyAtacando: 0
 --- !u!1001 &1169770972
 PrefabInstance:
@@ -15999,6 +16000,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.04329512
       objectReference: {fileID: 0}
+    - target: {fileID: 2066896392038628070, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+      propertyPath: m_TagString
+      value: armaImpacto
+      objectReference: {fileID: 0}
     - target: {fileID: 2066896392038628118, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_Name
       value: DogPolyart
@@ -16012,16 +16017,15 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3951229398020017800, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3951229398020017800, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45288819fde2143449a96207b14db0bb, type: 3}
---- !u!95 &1591141514 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2066896392029128874, guid: 45288819fde2143449a96207b14db0bb, type: 3}
-  m_PrefabInstance: {fileID: 1591141513}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1591141515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
@@ -16632,6 +16636,9 @@ MonoBehaviour:
   grado: 0
   target: {fileID: 0}
   atacando: 0
+  hp: 3
+  "da\xF1oEspada": 1
+  anim: {fileID: 0}
 --- !u!65 &1672059672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16643,8 +16650,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.5211372, z: 1}
+  m_Center: {x: 0, y: 0.76958656, z: 0}
 --- !u!1001 &1683111089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20334,3 +20341,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1 &2138171831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2066896392038628070, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+  m_PrefabInstance: {fileID: 1591141513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2138171832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138171831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22917414, y: 1.2003858, z: 0.23280981}
+  m_Center: {x: 0.026766377, y: 0.7388256, z: -0.016473942}

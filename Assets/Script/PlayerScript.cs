@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour
     public float n_speed;
     public bool IsRunning;
 
+    public BoxCollider[] armasBoxCol;
+
     void Start()
     {
         estoyAtacando = false;

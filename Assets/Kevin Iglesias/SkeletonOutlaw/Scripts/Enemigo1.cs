@@ -13,6 +13,10 @@ public class Enemigo1 : MonoBehaviour
     public GameObject target;
     public bool atacando;
 
+    public int hp;
+    public int dañoEspada;
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +25,27 @@ public class Enemigo1 : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "armaImpacto")
+        {
+            if(anim != null)
+            {
+                anim.Play("");
+            }
+            hp -= dañoEspada;
+        }
+        if(hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
     public void Comportamiento_Enemigo()
     {
-        if (Vector3.Distance(transform.position,target.transform.position) > 10)
+     
+        if (Vector3.Distance(transform.position, target.transform.position) > 10)
         {
             ani.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
@@ -51,7 +73,7 @@ public class Enemigo1 : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, target.transform.position) > 1 && !atacando)
+            if (Vector3.Distance(transform.position, target.transform.position) > 1)
             {
                 var lookPos = target.transform.position - transform.position;
                 lookPos.y = 0;
@@ -71,10 +93,10 @@ public class Enemigo1 : MonoBehaviour
 
                 ani.SetBool("attack", true);
                 atacando = true;
+                ani.SetBool("run", true);
             }
-
-            
         }
+            
     }
 
     public void Final_Ani()
