@@ -40,9 +40,9 @@ public class MenuPausa : MonoBehaviour
         isGamePaused = true;
     }
 
-    public void ControlGame()
+    public void ControlGame() //no lo utilizamos
     {
-         
+        
     }
 
     public void QuitGame()
