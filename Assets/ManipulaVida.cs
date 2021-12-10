@@ -13,6 +13,7 @@ public class ManipulaVida : MonoBehaviour
         vidaPlayer = GameObject.FindWithTag("DogPolyart").GetComponent<barraDeVida>();
     }
 
+   
     // Update is called once per frame
     private void OnTriggerStay(Collider other)
     {
@@ -21,4 +22,8 @@ public class ManipulaVida : MonoBehaviour
             vidaPlayer.vida -= daño;
         }
     }
+
+   
+
+    
 }
