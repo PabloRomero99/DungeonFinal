@@ -15,11 +15,12 @@ public class Enemigo1 : MonoBehaviour
 
     public int hp;
     public int dañoEspada;
-    public Animator anim;
+    private bool isDead;
 
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         ani = GetComponent<Animator>();
         target = GameObject.Find("DogPolyart"); 
         
@@ -27,17 +28,20 @@ public class Enemigo1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("HOLA");
         if(other.gameObject.tag == "armaImpacto")
         {
-            if(anim != null)
+            if(ani != null)
             {
-                anim.Play("");
+                ani.Play("");
             }
             hp -= dañoEspada;
         }
         if(hp <= 0)
         {
-            Destroy(gameObject);
+            isDead = true;
+            ani.SetBool("isDead", true);
+
         }
 
     }
@@ -108,7 +112,9 @@ public class Enemigo1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Comportamiento_Enemigo();
-        
+        if (!isDead)
+        {
+            Comportamiento_Enemigo();
+        }
     }
 }
