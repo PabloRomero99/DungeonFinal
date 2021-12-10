@@ -13,6 +13,9 @@ public class PlayerScript : MonoBehaviour
     public bool estoyAtacando;
     public float n_speed;
     public bool IsRunning;
+    barraDeVida vidaPlayer;
+    public bool muerte;
+    public int n;
 
     public BoxCollider[] armasBoxCol;
 
@@ -21,6 +24,9 @@ public class PlayerScript : MonoBehaviour
         estoyAtacando = false;
         m_Animator = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        n = 0;
+        vidaPlayer = GameObject.FindWithTag("DogPolyart").GetComponent<barraDeVida>();
+        muerte = false;
     }
 
     void Update()
@@ -30,15 +36,13 @@ public class PlayerScript : MonoBehaviour
             m_Animator.SetTrigger("Attack1");
             estoyAtacando = true;
         }
-    }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "axe")
+        if (vidaPlayer.vida == 0)
         {
-            m_Animator.SetTrigger("ReciveHit");
+            m_Animator.SetBool("Muerte", true);
         }
     }
+
 
     void FixedUpdate()
     {
@@ -60,6 +64,8 @@ public class PlayerScript : MonoBehaviour
             m_Rigidbody.MovePosition(transform.position + m_Movement * n_speed * Time.deltaTime);
             m_Rigidbody.MoveRotation(m_Rotation);
         }
+
+        
     }
 
     public void DejoDeAtacar()
