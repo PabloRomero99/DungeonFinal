@@ -30,8 +30,16 @@ public class PlayerScript : MonoBehaviour
             m_Animator.SetTrigger("Attack1");
             estoyAtacando = true;
         }
-
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "axe")
+        {
+            m_Animator.SetTrigger("ReciveHit");
+        }
+    }
+
     void FixedUpdate()
     {
         if (!estoyAtacando)

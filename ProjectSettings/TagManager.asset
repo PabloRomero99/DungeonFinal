@@ -7,6 +7,7 @@ TagManager:
   - DogPolyart
   - Jugador
   - armaImpacto
+  - axe
   layers:
   - Default
   - TransparentFX
