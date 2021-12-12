@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireBullet : MonoBehaviour
 {
+    /*
     public gameObject bullet;
     [SerializeField]
     private float timer = 2f;
@@ -34,4 +35,5 @@ public class FireBullet : MonoBehaviour
             yield return new WaitForSeconds(timer);
         }
     }
+    */
 }

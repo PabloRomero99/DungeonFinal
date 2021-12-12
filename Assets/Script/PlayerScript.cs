@@ -31,20 +31,23 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !estoyAtacando)
+        if (!muerePlayer)
         {
-            m_Animator.SetTrigger("Attack1");
-            estoyAtacando = true;
-        }
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !estoyAtacando)
+            {
+                m_Animator.SetTrigger("Attack1");
+                estoyAtacando = true;
+            }
 
-        checkLife();
-        SetDeath();
+            checkLife();
+            SetDeath();
+        }
     }
 
 
     void FixedUpdate()
     {
-        if (!estoyAtacando)
+        if (!estoyAtacando && !muerePlayer)
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");

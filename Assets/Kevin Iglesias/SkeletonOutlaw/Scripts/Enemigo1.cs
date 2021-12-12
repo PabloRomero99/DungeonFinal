@@ -17,32 +17,32 @@ public class Enemigo1 : MonoBehaviour
     public int dañoEspada;
     private bool isDead;
 
+
     // Start is called before the first frame update
     void Start()
     {
         isDead = false;
         ani = GetComponent<Animator>();
-        target = GameObject.Find("DogPolyart"); 
-        
+        target = GameObject.Find("DogPolyart");    
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("HOLA");
-        if(other.gameObject.tag == "armaImpacto")
+        if(other.gameObject.tag == "armaImpacto" && target.GetComponent<PlayerScript>().estoyAtacando)
         {
-            if(ani != null)
-            {
-                ani.Play("");
-            }
+            Debug.Log("DAÑO");
             hp -= dañoEspada;
         }
         if(hp <= 0)
         {
+            Debug.Log("Muerto");
             isDead = true;
             ani.SetBool("isDead", true);
-
+            ani.SetBool("run", false);
+            ani.SetBool("walk", false);
+            ani.SetBool("attack", false);
         }
+ 
 
     }
 

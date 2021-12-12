@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AimRotation : MonoBehaviour
 {
+    /*
     [SerializeField]
     private Transform target;
 
@@ -17,4 +18,5 @@ public class AimRotation : MonoBehaviour
         Quaternion targetOrientationQuaternion = targetOrientationQuaternion.LookRotation(targetOrientation);
         transform.rotation = targetOrientationQuaternion.Slerp(transform.rotation, targetOrientationQuaternion, Time.deltaTime);
     }
+    */
 }

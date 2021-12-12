@@ -22,11 +22,13 @@ public class Enemigo2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         ani = GetComponent<Animator>();
         target = GameObject.Find("DogPolyart");
 
     }
 
+    /*
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("HOLA");
@@ -47,7 +49,7 @@ public class Enemigo2 : MonoBehaviour
 
     }
 
-
+    */
     public void Comportamiento_Enemigo()
     {
 
