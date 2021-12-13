@@ -8,6 +8,7 @@ public class MenuPausa : MonoBehaviour
     public static bool isGamePaused = false;
 
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject controlMenu;
     
 
     // Update is called once per frame
@@ -40,9 +41,16 @@ public class MenuPausa : MonoBehaviour
         isGamePaused = true;
     }
 
-    public void ControlGame() //no lo utilizamos
+    public void ControlGame() 
     {
+        controlMenu.SetActive(true);
         
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            controlMenu.SetActive(false);
+            
+        }
+            
     }
 
     public void QuitGame()

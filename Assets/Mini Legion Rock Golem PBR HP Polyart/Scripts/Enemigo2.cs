@@ -28,28 +28,21 @@ public class Enemigo2 : MonoBehaviour
 
     }
 
-    /*
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("HOLA");
-        if (other.gameObject.tag == "armaImpacto")
+        if (other.gameObject.tag == "armaImpacto" && target.GetComponent<PlayerScript>().estoyAtacando)
         {
-            if (ani != null)
-            {
-                ani.Play("");
-            }
+            Debug.Log("DAÑO");
             hp -= dañoEspada;
         }
         if (hp <= 0)
         {
+            Debug.Log("Muerto");
             isDead = true;
-            ani.SetBool("isDead", true);
 
         }
-
     }
 
-    */
     public void Comportamiento_Enemigo()
     {
 
