@@ -4,20 +4,37 @@ using UnityEngine;
 
 public class Seguir : MonoBehaviour
 {
-    Transform player;
-    UnityEngine.AI.NavMeshAgent nav;
+    public Animator ani;
+    public GameObject target;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("DogPolyart").transform;
-        nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
+        ani = GetComponent<Animator>();
+        ani.SetBool("walk", true);
+        target = GameObject.Find("DogPolyart");
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Comportamiento_Enemigo()
     {
-        nav.SetDestination(player.position);
-    }
+        if (Vector3.Distance(transform.position, target.transform.position) > 20)
+        {
+            var lookPos = target.transform.position - transform.position;
+            lookPos.y = 0;
+            var rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
+
+            ani.SetBool("walk", true);
+            transform.Translate(Vector3.forward * 4 * Time.deltaTime);//ani.SetBool("run", true);
+
+        }
+        else
+        {
+            transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+            ani.SetBool("walk", true);
+        }
+    }    
 }
