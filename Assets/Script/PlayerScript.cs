@@ -96,7 +96,7 @@ public class PlayerScript : MonoBehaviour
         {
             objetoRecuperacion.SetActive(false);
             Debug.Log("Antes: "+vidaPlayer.vida);
-            vidaPlayer.vida += 25;
+            vidaPlayer.vida += 100 - vidaPlayer.vida;
             Debug.Log("Después "+vidaPlayer.vida);
         }
     }
