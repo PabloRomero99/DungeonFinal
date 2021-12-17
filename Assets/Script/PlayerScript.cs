@@ -15,7 +15,8 @@ public class PlayerScript : MonoBehaviour
     public bool IsRunning;
     barraDeVida vidaPlayer;
     public bool muerePlayer;
-   
+    public GameObject objetoRecuperacion;
+
 
     public BoxCollider[] armasBoxCol;
 
@@ -26,6 +27,7 @@ public class PlayerScript : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
         
         vidaPlayer = GameObject.FindWithTag("DogPolyart").GetComponent<barraDeVida>();
+        objetoRecuperacion = GameObject.Find("Capsule");
         muerePlayer = false;
     }
 
@@ -41,6 +43,7 @@ public class PlayerScript : MonoBehaviour
 
             checkLife();
             SetDeath();
+            recuperacion();
         }
     }
 
@@ -84,6 +87,17 @@ public class PlayerScript : MonoBehaviour
         if (vidaPlayer.vida <= 0)
         {
             muerePlayer = true;
+        }
+    }
+
+    void recuperacion()
+    {
+        if (Vector3.Distance(transform.position, objetoRecuperacion.transform.position) < 2)
+        {
+            objetoRecuperacion.SetActive(false);
+            Debug.Log("Antes: "+vidaPlayer.vida);
+            vidaPlayer.vida += 25;
+            Debug.Log("Después "+vidaPlayer.vida);
         }
     }
 }
