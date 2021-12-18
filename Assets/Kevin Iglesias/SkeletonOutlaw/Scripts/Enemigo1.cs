@@ -17,13 +17,16 @@ public class Enemigo1 : MonoBehaviour
     public int dañoEspada;
     private bool isDead;
 
+    [SerializeField] GameObject key;
+
 
     // Start is called before the first frame update
     void Start()
     {
         isDead = false;
         ani = GetComponent<Animator>();
-        target = GameObject.Find("DogPolyart");    
+        target = GameObject.Find("DogPolyart");
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -115,6 +118,12 @@ public class Enemigo1 : MonoBehaviour
         if (!isDead)
         {
             Comportamiento_Enemigo();
+            key.SetActive(false);
         }
+        else
+        {
+            key.SetActive(true);
+        }
+        
     }
 }
