@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
         
         vidaPlayer = GameObject.FindWithTag("DogPolyart").GetComponent<barraDeVida>();
-        objetoRecuperacion = GameObject.Find("Capsule");
+        objetoRecuperacion = GameObject.Find("Heart");
         muerePlayer = false;
     }
 
