@@ -47,6 +47,7 @@ public class AimLocation : MonoBehaviour
         {
             Debug.Log("Muerto");
             isDead = true;
+            atacando = false;
             ani.SetBool("isDead", true);
             ani.SetBool("run", false);
             ani.SetBool("walk", false);
