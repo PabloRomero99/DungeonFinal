@@ -59,7 +59,7 @@ public class AimLocation : MonoBehaviour
     public void Comportamiento_Enemigo()
     {
 
-        if (Vector3.Distance(transform.position, target.transform.position) > 30)
+        if (Vector3.Distance(transform.position, target.transform.position) > 50)
         {
             ani.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
@@ -87,7 +87,7 @@ public class AimLocation : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, target.transform.position) > 10)
+            if (Vector3.Distance(transform.position, target.transform.position) > 20)
             {
                 var lookPos = target.transform.position - transform.position;
                 lookPos.y = 0;
@@ -107,7 +107,7 @@ public class AimLocation : MonoBehaviour
 
                 ani.SetBool("attack", true);
                 atacando = true;
-                StartCoroutine(FireBullets());
+                //StartCoroutine(FireBullets());
                 ani.SetBool("run", true);
             }
         }
@@ -118,17 +118,6 @@ public class AimLocation : MonoBehaviour
     {
         ani.SetBool("attack", false);
         atacando = false;
-    }
-
-    IEnumerator FireBullets()
-    {
-        for(int i = 0; i < maxCounter; i++)
-        {
-            counter++;
-            Instantiate(bullet, transform.position, transform.rotation);
-            yield return new WaitForSeconds(timer);
-        }
-
     }
 
     // Update is called once per frame
