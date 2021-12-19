@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemigo2 : MonoBehaviour
+public class AimLocation : MonoBehaviour
 {
     public int rutina;
     public float cronometro;
@@ -16,6 +16,14 @@ public class Enemigo2 : MonoBehaviour
     public int hp;
     public int dañoEspada;
     private bool isDead;
+
+    [SerializeField] GameObject key;
+
+    [SerializeField] GameObject bullet;
+    private int counter;
+    [SerializeField] private int maxCounter = 20;
+    [SerializeField] private float timer = 2f;
+
 
 
 
@@ -40,17 +48,20 @@ public class Enemigo2 : MonoBehaviour
             Debug.Log("Muerto");
             isDead = true;
             ani.SetBool("isDead", true);
+            ani.SetBool("run", false);
             ani.SetBool("walk", false);
             ani.SetBool("attack", false);
         }
+
+
     }
 
     public void Comportamiento_Enemigo()
     {
 
-        if (Vector3.Distance(transform.position, target.transform.position) > 20)
+        if (Vector3.Distance(transform.position, target.transform.position) > 30)
         {
-            transform.Translate(Vector3.forward * 1 * Time.deltaTime); //ani.SetBool("run", false);
+            ani.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
             if (cronometro >= 4)
             {
@@ -76,26 +87,28 @@ public class Enemigo2 : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, target.transform.position) > 5)
+            if (Vector3.Distance(transform.position, target.transform.position) > 10)
             {
                 var lookPos = target.transform.position - transform.position;
                 lookPos.y = 0;
                 var rotation = Quaternion.LookRotation(lookPos);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
+                ani.SetBool("walk", false);
 
-                ani.SetBool("walk", true);
-                transform.Translate(Vector3.forward * 4 * Time.deltaTime);//ani.SetBool("run", true);
-
+                ani.SetBool("run", true);
+                transform.Translate(Vector3.forward * 4 * Time.deltaTime);
 
                 ani.SetBool("attack", false);
             }
             else
             {
                 ani.SetBool("walk", false);
+                ani.SetBool("run", false);
 
                 ani.SetBool("attack", true);
                 atacando = true;
-                ani.SetBool("walk", true);
+                StartCoroutine(FireBullets());
+                ani.SetBool("run", true);
             }
         }
 
@@ -107,12 +120,29 @@ public class Enemigo2 : MonoBehaviour
         atacando = false;
     }
 
+    IEnumerator FireBullets()
+    {
+        for(int i = 0; i < maxCounter; i++)
+        {
+            counter++;
+            Instantiate(bullet, transform.position, transform.rotation);
+            yield return new WaitForSeconds(timer);
+        }
+
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (!isDead)
         {
             Comportamiento_Enemigo();
+            key.SetActive(false);
         }
+        else
+        {
+            key.SetActive(true);
+        }
+
     }
 }
