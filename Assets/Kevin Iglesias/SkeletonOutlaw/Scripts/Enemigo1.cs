@@ -13,6 +13,8 @@ public class Enemigo1 : MonoBehaviour
     public GameObject target;
     public bool atacando;
 
+    public int keyNum;
+
     public int hp;
     public int dañoEspada;
     private bool isDead;
@@ -26,6 +28,7 @@ public class Enemigo1 : MonoBehaviour
         isDead = false;
         ani = GetComponent<Animator>();
         target = GameObject.Find("DogPolyart");
+        keyNum = 0;
         
     }
 
@@ -40,6 +43,8 @@ public class Enemigo1 : MonoBehaviour
         {
             Debug.Log("Muerto");
             isDead = true;
+            key.SetActive(true);
+            keyNum++;
             ani.SetBool("isDead", true);
             ani.SetBool("run", false);
             ani.SetBool("walk", false);
@@ -118,12 +123,7 @@ public class Enemigo1 : MonoBehaviour
         if (!isDead)
         {
             Comportamiento_Enemigo();
-            key.SetActive(false);
-        }
-        else
-        {
-            key.SetActive(true);
-        }
+        }    
         
     }
 }

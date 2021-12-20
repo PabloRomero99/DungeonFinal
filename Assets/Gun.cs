@@ -21,9 +21,13 @@ public class Gun : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.Space))
         if (target.GetComponent<AimLocation>().atacando)
         {
+           
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+         
         }
 
     }
+
+   
 }

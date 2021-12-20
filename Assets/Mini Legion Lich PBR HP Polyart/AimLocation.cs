@@ -21,8 +21,7 @@ public class AimLocation : MonoBehaviour
 
     [SerializeField] GameObject bullet;
     private int counter;
-    [SerializeField] private int maxCounter = 20;
-    [SerializeField] private float timer = 2f;
+    private int timer = 0;
 
 
 
@@ -33,6 +32,7 @@ public class AimLocation : MonoBehaviour
         isDead = false;
         ani = GetComponent<Animator>();
         target = GameObject.Find("DogPolyart");
+        
 
     }
 
@@ -49,6 +49,7 @@ public class AimLocation : MonoBehaviour
             isDead = true;
             atacando = false;
             ani.SetBool("isDead", true);
+            key.SetActive(true);
             ani.SetBool("run", false);
             ani.SetBool("walk", false);
             ani.SetBool("attack", false);
@@ -100,15 +101,28 @@ public class AimLocation : MonoBehaviour
                 transform.Translate(Vector3.forward * 4 * Time.deltaTime);
 
                 ani.SetBool("attack", false);
+                atacando = false;
             }
             else
             {
                 ani.SetBool("walk", false);
                 ani.SetBool("run", false);
 
+                //TEST
+                if (timer == 30)
+                {
+                    timer = 0;
+                    StartCoroutine("Esperar");
+                    var lookPos = target.transform.position - transform.position;
+                    lookPos.y = 0;
+                    var rotation = Quaternion.LookRotation(lookPos);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
+                }
+                timer++;
+                //
+
                 ani.SetBool("attack", true);
                 atacando = true;
-                //StartCoroutine(FireBullets());
                 ani.SetBool("run", true);
             }
         }
@@ -127,12 +141,12 @@ public class AimLocation : MonoBehaviour
         if (!isDead)
         {
             Comportamiento_Enemigo();
-            key.SetActive(false);
         }
-        else
-        {
-            key.SetActive(true);
-        }
+        
+    }
 
+    IEnumerator Esperar()
+    {
+        yield return new WaitForSeconds(3);
     }
 }

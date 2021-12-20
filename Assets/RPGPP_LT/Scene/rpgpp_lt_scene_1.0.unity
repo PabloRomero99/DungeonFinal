@@ -753,8 +753,6 @@ MonoBehaviour:
   "da\xF1oEspada": 1
   key: {fileID: 1529776493}
   bullet: {fileID: 0}
-  maxCounter: 20
-  timer: 2
 --- !u!95 &84371281 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8735932539965035658, guid: cc2904f8420d54e45b80616562ff859c, type: 3}
@@ -8391,7 +8389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695489341}
   m_LocalRotation: {x: -0.45451948, y: 0.5416752, z: 0.5416752, w: 0.45451948}
-  m_LocalPosition: {x: -0, y: 195.3, z: 0}
+  m_LocalPosition: {x: 0, y: 231.9, z: -0}
   m_LocalScale: {x: 1.18, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1020675294}
@@ -11436,7 +11434,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.149933, y: 1}
+    m_SensorSize: {x: 2.16332, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11485,6 +11483,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 695489342}
   bulletPrefab: {fileID: 7903682250178611148, guid: 32472802e96a55e4681fbc904312ed73, type: 3}
   bulletSpeed: 20
+  target: {fileID: 0}
 --- !u!136 &1020675296
 CapsuleCollider:
   m_ObjectHideFlags: 0
