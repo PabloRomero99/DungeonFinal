@@ -17,6 +17,9 @@ public class Enemigo2 : MonoBehaviour
     public int dañoEspada;
     private bool isDead;
 
+    [SerializeField] GameObject eventoFinal;
+
+
 
 
     // Start is called before the first frame update
@@ -39,9 +42,12 @@ public class Enemigo2 : MonoBehaviour
         {
             Debug.Log("Muerto");
             isDead = true;
+            
             ani.SetBool("isDead", true);
             ani.SetBool("walk", false);
             ani.SetBool("attack", false);
+            eventoFinal.SetActive(true);
+            Application.Quit();
         }
     }
 
