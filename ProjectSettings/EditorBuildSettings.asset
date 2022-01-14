@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/RPGPP_LT/Scene/Juego.unity
+    guid: d2809ab9b90eea7419d8d90d4c505d35
+  - enabled: 1
+    path: Assets/RPGPP_LT/Scene/Main Menu.unity
+    guid: a82849b7799d918419aa710f0b4c0407
   m_configObjects: {}

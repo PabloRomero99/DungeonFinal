@@ -55,8 +55,7 @@ public class MenuPausa : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
 
-        Debug.Log("Quit");
+        SceneManager.LoadScene("Main Menu");
     }
 }
