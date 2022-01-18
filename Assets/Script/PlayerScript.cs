@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     barraDeVida vidaPlayer;
     public bool muerePlayer;
 
-      
+
 
 
 
@@ -27,10 +28,10 @@ public class PlayerScript : MonoBehaviour
         estoyAtacando = false;
         m_Animator = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
-        
+
         vidaPlayer = GameObject.FindWithTag("DogPolyart").GetComponent<barraDeVida>();
         ;
-        
+
         muerePlayer = false;
     }
 
@@ -46,7 +47,11 @@ public class PlayerScript : MonoBehaviour
 
             checkLife();
             SetDeath();
-            
+
+        }
+        else
+        {
+            StartCoroutine(waiter());
         }
     }
 
@@ -81,6 +86,7 @@ public class PlayerScript : MonoBehaviour
     void SetDeath()
     {
         m_Animator.SetBool("Muerte", muerePlayer);
+
     }
 
     void checkLife()
@@ -89,5 +95,12 @@ public class PlayerScript : MonoBehaviour
         {
             muerePlayer = true;
         }
+    }
+
+    IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Main Menu");
+
     }
 }
